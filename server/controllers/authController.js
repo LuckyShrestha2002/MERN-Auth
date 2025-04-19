@@ -112,11 +112,15 @@ export const logout = async (req, res)=>{
 }
 
 // Send verification OTP to the User's Email
+
 export const sendVerifyOtp = async (req, res)=>{
 try {
     const {userId} = req.body;
 
     const user = await userModel.findById(userId);
+
+    console.log(user)
+    
 
     if(user.isAccountVerified){
         return res.json({success: false, message: "Account already verified"})
@@ -267,3 +271,4 @@ export const resetPassword = async (req, res)=>{
         return res.json({ success: false, message: error.message });
     }
 }
+//hyaaaa//
