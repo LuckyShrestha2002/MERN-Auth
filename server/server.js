@@ -12,7 +12,7 @@ connectDB();
 
 const allowedOrigins = [
     'http://localhost:5173', // local dev
-    'https://mern-auth-neon-one.vercel.app' // 
+    'https://mern-authentication-kappa.vercel.app' // 
   ];
 
 app.use(express.json());
