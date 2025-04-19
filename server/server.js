@@ -12,19 +12,14 @@ connectDB();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://mern-authentication-kappa.vercel.app",
+  "https://mern-auth-project-six.vercel.app",
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
+  origin: "https://mern-auth-project-six.vercel.app", // your frontend URL
+  credentials: true
 }));
+  
 
 app.use(express.json());
 app.use(cookieParser());
